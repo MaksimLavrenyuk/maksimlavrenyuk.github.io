@@ -3,12 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.2.1/firebase-app.js"></script>
+ 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.2.1/firebase-analytics.js"></script>
+ 
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+    <script src="https://pxl.maksim-lavrenyuk.dev.altkraft.com/ak_container.js?id=MXw5OQ.." ></script>
 </head>
 <body>
-            <script src=https://pxl.maksim-lavrenyuk.dev.altkraft.com/form/js/embed_v1.js></script><iframe src="https://pxl.maksim-lavrenyuk.dev.altkraft.com/form?form=9HUTyRu1WWVpufkZk2gcLJRbuci64CHG4Y6sr5h84DMD8eQL9M5dBXCvM7oETnfTo92McAEr5qHMW&iframe=1" frameborder="0" name="ak-form-9HUTyRu1WWVpufkZk2gcLJRbuci64CHG4Y6sr5h84DMD8eQL9M5dBXCvM7oETnfTo92McAEr5qHMW" width="650" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>
-    
-    
-    
-    <script src="https://yastatic.net/q/forms-frontend-ext/_/embed.js"></script><iframe src="https://forms.yandex.ru/u/5f7afe565869a506f08ec95e/?iframe=1" frameborder="0" name="ya-form-5f7afe565869a506f08ec95e" width="650"></iframe>
-    </body>
+    <button id="init_sub">Подписаться на уведомления</button> // Кнопка подписки
+ 
+<script>
+    document.getElementById('init_sub').addEventListener('click', function() { // По клику на кнопку..
+    try {
+        var akPush = new AKPush();
+        akPush.initSubscription() // ..показать форму подписки
+        }
+    catch (e) {
+        console.log(e); // Или записать ошибку в консоль браузера
+        }
+    });
+</script>
+</body>
 </html>
