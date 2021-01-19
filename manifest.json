@@ -1,7 +1,4 @@
 {
-  "permissions": [
-    "gcm","tabs","activeTab"
-  ],
   "name": "https://maksimlavrenyuk.github.io",
   "display": "standalone"
 }
