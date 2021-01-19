@@ -1,6 +1,6 @@
 {
     "permissions": [
-      "activeTab"
+       "tabs", "activeTab"
   ],
   "name": "https://maksimlavrenyuk.github.io",
   "display": "standalone"
