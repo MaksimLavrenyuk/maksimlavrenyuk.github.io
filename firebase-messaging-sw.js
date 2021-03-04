@@ -9,14 +9,15 @@
  // Initialize the Firebase app in the service worker by passing in
  // your app's Firebase config object.
  // https://firebase.google.com/docs/web/setup#config-object
- var firebaseConfig = {
-    apiKey: "AIzaSyC2KwZ2L14GTzTn5BdI2z8kKioPNj1UYzw",
-    authDomain: "testvapidkeys.firebaseapp.com",
-    projectId: "testvapidkeys",
-    storageBucket: "testvapidkeys.appspot.com",
-    messagingSenderId: "8001121591",
-    appId: "1:8001121591:web:24eda0f4cea235138ebeb2"
-  };
+ const firebaseConfig = {
+  apiKey: "AIzaSyAkRFMa_SfLoL_WKnyBIwoBLhE09WHGzVU",
+  authDomain: "maksim-push.firebaseapp.com",
+  databaseURL: "https://maksim-push.firebaseio.com",
+  projectId: "maksim-push",
+  storageBucket: "maksim-push.appspot.com",
+  messagingSenderId: "366281823968",
+  appId: "1:366281823968:web:9f28085bee1a0ca0b4e285"
+};
 
 // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
