@@ -11,8 +11,6 @@
     <button id="init_sub">Подписаться на уведомления</button> // Кнопка подписки
  
 <script>
-     const push = new AkPush();
-
     AkPush.events.on('subscribe', (data) => {
         console.log(data);
     });
