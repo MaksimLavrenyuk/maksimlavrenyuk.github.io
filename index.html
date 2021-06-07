@@ -11,6 +11,11 @@
     <button id="init_sub">Подписаться на уведомления</button> // Кнопка подписки
  
 <script>
+     const push = new AkPush();
+
+    AkPush.events.on('subscribe', (data) => {
+        console.log(data);
+    });
     document.getElementById('init_sub').addEventListener('click', function() { // По клику на кнопку..
     try {
         var akPush = new AKPush();
