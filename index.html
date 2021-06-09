@@ -11,7 +11,7 @@
     <button id="init_sub">Подписаться на уведомления</button> // Кнопка подписки
  
 <script>
-//     AKPush.removeToken();
+    AKPush.removeToken();
     AKPush.events.on('subscribe', (data) => {
         console.log(data);
     });
