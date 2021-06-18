@@ -12,7 +12,7 @@
     document.getElementById('init_sub').addEventListener('click', function() { // По клику на кнопку..
     try {
         var akPush = new AKPush();
-        akPush.initSubscription() // ..показать форму подписки, добавить матчинг по email полю
+        akPush.initSubscription({ email: 'example@opk.com' }) // ..показать форму подписки, добавить матчинг по email полю
         }
     catch (e) {
         console.log(e); // Или записать ошибку в консоль браузера
