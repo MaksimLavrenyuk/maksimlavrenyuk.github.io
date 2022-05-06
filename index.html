@@ -71,7 +71,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <input type="submit" value="Save">
 </form>
     <script>
- window.postMessage(JSON.stringify({
+ window.parent.postMessage(JSON.stringify({
  source: 'ak',
   type: 'ak-debug',
   data: "Here's Johnny!",
