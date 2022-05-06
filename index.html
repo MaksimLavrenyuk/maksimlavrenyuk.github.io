@@ -72,7 +72,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </form>
     <script>
 setInterval(() => {
-     window.parent.postMessage(JSON.stringify({
+     window.opener.postMessage(JSON.stringify({
  source: 'ak',
   type: 'ak-debug',
   data: "Here's Johnny!",
