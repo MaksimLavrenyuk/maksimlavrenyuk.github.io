@@ -71,11 +71,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <input type="submit" value="Save">
 </form>
     <script>
- window.parent.postMessage(JSON.stringify({
+setInterval(() => {
+     window.parent.postMessage(JSON.stringify({
  source: 'ak',
   type: 'ak-debug',
   data: "Here's Johnny!",
 }), '*');    
+}, 1000);
 </script>
 </body>
 </html>
