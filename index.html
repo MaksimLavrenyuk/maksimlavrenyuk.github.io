@@ -92,9 +92,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.getElementById('init_sub').addEventListener('click', function() { // По клику на кнопку..
     try {
         var akPush = new AKPush({
-           projectId: 'maksim-push',
-           apiKey: 'AIzaSyAkRFMa_SfLoL_WKnyBIwoBLhE09WHGzVU',
-           messagingSenderId: '366281823968',
+           firebase: {
+               projectId: 'maksim-push',
+               apiKey: 'AIzaSyAkRFMa_SfLoL_WKnyBIwoBLhE09WHGzVU',
+               messagingSenderId: '366281823968',
+           },
            resourceToken: '6Z9sTw3NMdm-453ae7a84c1ec8b4',
         });
         akPush.initSubscription() // ..показать форму подписки
