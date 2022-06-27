@@ -6022,7 +6022,7 @@ var PushTag = /** @class */ (function (_super) {
     }
     PushTag.prototype.run = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _a, AKPush, pushData, akPush, e_1;
+            var _a, AKPushJS, pushData, AKPush, akPush, e_1;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -6032,11 +6032,13 @@ var PushTag = /** @class */ (function (_super) {
                                 this.dataRequest,
                             ])];
                     case 1:
-                        _a = __read.apply(void 0, [_b.sent(), 2]), AKPush = _a[0], pushData = _a[1];
+                        _a = __read.apply(void 0, [_b.sent(), 2]), AKPushJS = _a[0], pushData = _a[1];
                         if (!pushData.data) return [3 /*break*/, 3];
                         if (this.swPath) {
                             pushData.data = __assign(__assign({}, pushData.data), { swPath: this.swPath });
                         }
+                        if (!(AKPushJS === null || AKPushJS === void 0 ? void 0 : AKPushJS.default)) return [3 /*break*/, 3];
+                        AKPush = AKPushJS === null || AKPushJS === void 0 ? void 0 : AKPushJS.default;
                         akPush = new AKPush(__assign(__assign({}, pushData.data), { resourceToken: this.resourceToken }));
                         return [4 /*yield*/, akPush.initSubscription()];
                     case 2:
