@@ -8245,14 +8245,13 @@ var SourceVariable = /** @class */ (function (_super) {
         _this.type = UserVariables$1.Source;
         _this.predicate = props.fields.predicate;
         _this.sources = props.fields.check_sources;
-        _this.sourcebuster = sourcebuster.init();
+        sourcebuster.init();
         return _this;
     }
     SourceVariable.prototype.read = function () {
         var type = sourcebuster.get.current.typ;
         var matchedType = MATCHING_MAP[type];
         // eslint-disable-next-line no-console
-        console.log(this.sourcebuster);
         switch (this.predicate) {
             case SourcePredicate.One:
                 return this.sources.includes(matchedType);
@@ -8584,7 +8583,7 @@ var Starter = /** @class */ (function () {
  * @see rollup.config.js
  */
 
-const AC_REPLACE_MARKER = '{"domain":"https://maksimlavrenyuk.github.io","dataLayerName":"acDataLayer","containerVersion":1,"containerID":"ACTM-1","triggers":[{"strId":"trigger1","type":"click","segment":{"queries":[{"argument":"Variable","filter":"true","operator":"equals"}]}}],"variables":[{"fields":{"predicate":"one_value","check_sources":["organic","link","ad","typein"]},"strId":"Variable","type":"Source"}],"tags":[{"type":"html","fields":{"html":"<div>test</div>"},"strId":"tag1"}],"instructions":[{"strId":"instruction1","firingOption":"once_per_event","priority":0,"tag":"tag1","triggers":["trigger1"]}]}';
+const AC_REPLACE_MARKER = '{"domain":"https://maksimlavrenyuk.github.io","dataLayerName":"acDataLayer","containerVersion":1,"containerID":"ACTM-1","triggers":[{"strId":"trigger1","type":"click","segment":{"queries":[{"argument":"Variable","filter":"true","operator":"equals"}]}}],"variables":[{"fields":{"predicate":"one_value","check_sources":["organic","link","ad","typein"]},"strId":"Variable","type":"Source"},{"fields":{"predicate":"one_value","check_sources":["organic","link","ad","typein"]},"strId":"Variable2","type":"Source"}],"tags":[{"type":"html","fields":{"html":"<div>test</div>"},"strId":"tag1"}],"instructions":[{"strId":"instruction1","firingOption":"once_per_event","priority":0,"tag":"tag1","triggers":["trigger1"]}]}';
 
 var parsedData = JSON.parse(AC_REPLACE_MARKER);
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
