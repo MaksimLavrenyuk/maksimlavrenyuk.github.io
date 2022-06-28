@@ -2411,6 +2411,12 @@ var TriggerSegment = /** @class */ (function () {
         if (String(null) === trimmedFilter) {
             return null;
         }
+        if (trimmedFilter === 'true') {
+            return true;
+        }
+        if (trimmedFilter === 'false') {
+            return false;
+        }
         if (!Number.isNaN(Number(trimmedFilter))) {
             return Number(trimmedFilter);
         }
