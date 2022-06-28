@@ -8251,15 +8251,20 @@ var SourceVariable = /** @class */ (function (_super) {
     SourceVariable.prototype.read = function () {
         var type = sourcebuster.get.current.typ;
         var matchedType = MATCHING_MAP[type];
-        // eslint-disable-next-line no-console
+        var result = false;
         switch (this.predicate) {
             case SourcePredicate.One:
-                return this.sources.includes(matchedType);
+                result = this.sources.includes(matchedType);
+                break;
             case SourcePredicate.None:
-                return !this.sources.includes(matchedType);
+                result = !this.sources.includes(matchedType);
+                break;
             default:
-                return false;
+                result = false;
         }
+        // eslint-disable-next-line no-console
+        console.log(result);
+        return result;
     };
     return SourceVariable;
 }(Variable));
