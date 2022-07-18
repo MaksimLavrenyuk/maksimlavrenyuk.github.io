@@ -80,9 +80,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 
     window.AKPush.events.on('subscribe', ({ browser, token, provider }) => {
-      if (token) {
-        console.log(token);
-      }
+      console.log(token);
     });
     document.getElementById('init_sub').addEventListener('click', function() { // По клику на кнопку..
     try {
