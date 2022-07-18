@@ -79,7 +79,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 
-    AKPush.removeToken();
+    window.AKPush.events.on('subscribe', ({ browser, token, provider }) => {
+      if (token) {
+        this.updateFirebaseToken(token);
+      }
+    });
     document.getElementById('init_sub').addEventListener('click', function() { // По клику на кнопку..
     try {
         var akPush = new AKPush();
