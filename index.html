@@ -81,7 +81,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     window.AKPush.events.on('subscribe', ({ browser, token, provider }) => {
       if (token) {
-        this.updateFirebaseToken(token);
+        console.log(token);
       }
     });
     document.getElementById('init_sub').addEventListener('click', function() { // По клику на кнопку..
