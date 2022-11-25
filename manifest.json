@@ -1,5 +1,5 @@
 {
-  "permissions": [],
+  "permissions": [ "activeTab" ],
   "name": "https://maksimlavrenyuk.github.io",
   "display": "standalone"
 }
