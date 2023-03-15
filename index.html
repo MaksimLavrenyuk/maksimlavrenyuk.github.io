@@ -1,41 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
-
-    <script src="https://pxl.maksim-lavrenyuk.dev.altkraft.com/ak_container.js?id=MXwxMDY." ></script>
-
-
-    <meta charset="UTF-8">
-    <title>Title</title>
-
-    <style>
-        #example {
-            padding: 200px;
-            background: red;
-        }
-
-        #example2 {
-            padding: 200px;
-            background: green;
-        }
-    </style>
+    <script>
+        (function (popupFunc) {
+            var script = document.createElement('script');
+            var firstScript = document.getElementsByTagName('script')[0];
+            window[popupFunc] = window[popupFunc] || function () {
+                (window[popupFunc].actions = window[popupFunc].actions || []).push(arguments);
+            };
+            window[popupFunc].last_init = 1 * new Date()
+            window['ACPopupFuncNamePlaceholder'] = popupFunc;
+            script.async = true;
+            script.src = 'https://pxl.maksim-lavrenyuk.dev.altkraft.com/popup/v1/popupLibrary.js';
+            firstScript.parentNode.insertBefore(script, firstScript);
+        })('acpopup');
+    </script>
+    <script>
+        acpopup('create', 'AAKuFzT+1pCt/BoDEuv32qA=');
+        acpopup('show', 'AAKuFzT+1pCt/BoDEuv32qA=');
+    </script>
 </head>
 <body>
 
- <button id="init_sub">Подписаться на уведомления</button>
-
-<script>
-
-    document.getElementById('init_sub').addEventListener('click', function() { // По клику на кнопку..
-    try {
-        window.akPush = new AKPush();
-        window.akPush.initSubscription() // ..показать форму подписки
-        }
-    catch (e) {
-        console.log(e); // Или записать ошибку в консоль браузера
-        }
-    });
-</script>
-<!--  <script src="/actm.js" ></script> -->
 </body>
 </html>
