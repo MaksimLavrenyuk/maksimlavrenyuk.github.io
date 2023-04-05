@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="ru">
 <head>
+    <script src="https://pxl.maksim-lavrenyuk.dev.altkraft.com/ak_container.js?id=MXwxMDY." ></script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -29,5 +30,19 @@
 </head>
 <body>
 
+<button id="init_sub">Подписаться на уведомления</button>
+
+<script>
+
+    document.getElementById('init_sub').addEventListener('click', function() { // По клику на кнопку..
+        try {
+            window.akPush = new AKPush();
+            window.akPush.initSubscription() // ..показать форму подписки
+        }
+        catch (e) {
+            console.log(e); // Или записать ошибку в консоль браузера
+        }
+    });
+</script>
 </body>
 </html>
