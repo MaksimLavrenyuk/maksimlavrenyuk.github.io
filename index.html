@@ -25,15 +25,15 @@
 
 <script>
 
-    // document.getElementById('init_sub').addEventListener('click', function() { // По клику на кнопку..
-    //     try {
-    //         window.akPush = new AKPush();
-    //         window.akPush.initSubscription() // ..показать форму подписки
-    //     }
-    //     catch (e) {
-    //         console.log(e); // Или записать ошибку в консоль браузера
-    //     }
-    // });
+    document.getElementById('init_sub').addEventListener('click', function() { // По клику на кнопку..
+        try {
+            window.akPush = new AKPush();
+            window.akPush.initSubscription() // ..показать форму подписки
+        }
+        catch (e) {
+            console.log(e); // Или записать ошибку в консоль браузера
+        }
+    });
 </script>
 </body>
 </html>
