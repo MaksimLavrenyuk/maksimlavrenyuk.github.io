@@ -3,6 +3,22 @@
 <head>
     <script src="https://pxl.maksim-lavrenyuk.dev.altkraft.com/ak_container.js?id=MXwxMDY." ></script>
     <link rel="manifest" href="/manifest.json">
+
+    <script>
+        (function (window, document, dataLayerName, containerID) {
+            window[dataLayerName] = window[dataLayerName] || [];
+            window[dataLayerName].push({ 'start': new Date().getTime(), event: 'actm-js' });
+            var firstScript = document.getElementsByTagName('script')[0];
+            var script = document.createElement('script');
+            var dl = dataLayerName !== 'acDataLayer' ? '&l=' + dataLayerName : '';
+            script.async = true;
+            script.src = 'https://pxl.maksim-lavrenyuk.dev.altkraft.com/actm/actm.js?id=' + containerID + dl;
+            script.type = 'module';
+            if (firstScript && firstScript.parentNode) {
+                firstScript.parentNode.insertBefore(script, firstScript);
+            }
+        }(window, document, 'acDataLayer', 'ATM-AFJFUc7SbUYRpv7HA'));
+    </script>
 <!--    <script>-->
 <!--        (function (window, document, dataLayerName, containerID) {-->
 <!--            window[dataLayerName] = window[dataLayerName] || [];-->
