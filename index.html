@@ -196,7 +196,9 @@
 <div>11</div>
 <div id="visible">visible</div>
 <script>
-
+    window.onerror = (event, err) => {
+        document.body.prepend(JSON.stringify(event), JSON.stringify(err));
+    };
     document.getElementById('init_sub').addEventListener('click', function() { // По клику на кнопку..
         try {
             window.akPush = new AKPush();
