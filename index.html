@@ -200,6 +200,9 @@
     document.getElementById('err').addEventListener('click', () => {
         throw new Error('click on btn err');
     })
+    window.onerror = function () {
+        alert("Произошла ошибка.");
+    };
     // window.onerror = (event, err) => {
     //     document.body.prepend(JSON.stringify(event), JSON.stringify(err));
     // };
