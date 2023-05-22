@@ -196,6 +196,7 @@
 <div>11</div>
 <div id="visible">visible</div>
 <button id="err">error</button>
+<a href="#" name="button1" onclick="acDataLayer.push({'event': 'button1-click'});">Button 1</a>
 <script>
     document.getElementById('err').addEventListener('click', () => {
         throw new Error('click on btn err');
