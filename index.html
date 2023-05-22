@@ -195,10 +195,14 @@
 <div>11</div>
 <div>11</div>
 <div id="visible">visible</div>
+<button id="err">error</button>
 <script>
-    window.onerror = (event, err) => {
-        document.body.prepend(JSON.stringify(event), JSON.stringify(err));
-    };
+    document.getElementById('err').addEventListener('click', () => {
+        throw new Error('click on btn err');
+    })
+    // window.onerror = (event, err) => {
+    //     document.body.prepend(JSON.stringify(event), JSON.stringify(err));
+    // };
     document.getElementById('init_sub').addEventListener('click', function() { // По клику на кнопку..
         try {
             window.akPush = new AKPush();
